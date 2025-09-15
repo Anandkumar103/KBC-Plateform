@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>KBC-style Quiz App</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>KBC: Kaun Banega Crorepati — Demo</h1>
+      <p class="subtitle">Answer 15 questions, climb the ladder, and reach ₹7,00,00,000!</p>
+    </header>
+
+    <main>
+      <section id="intro" class="card">
+        <div class="row">
+          <div>
+            <h2>Welcome to KBC Demo</h2>
+            <p>Enter a username to start. This demo stores scores locally on a small SQLite DB.</p>
+            <input id="username" placeholder="Choose a username (e.g., anand123)" />
+            <button id="btnRegister">Start / Register</button>
+            <p id="registerMsg" class="muted"></p>
+            <div class="controls">
+              <button id="btnDaily">Claim Daily Coins</button>
+              <button id="btnLeaderboard">Show Leaderboard</button>
+            </div>
+            <div id="userInfo" class="muted"></div>
+          </div>
+
+          <aside class="ladder card small" id="ladder">
+            <h3>Prize Ladder</h3>
+            <ol id="ladderList"></ol>
+          </aside>
+        </div>
+      </section>
+
+      <section id="quizArea" class="card hidden">
+        <div class="quizHeader">
+          <div id="qInfo">Question <span id="qIndex">1</span> / 15 — Prize: <strong id="qPrize"></strong></div>
+          <div id="coinsInfo">Coins: <span id="coins">0</span></div>
+        </div>
+
+        <div id="questionBox" class="questionBox">
+          <h2 id="questionText">Loading question...</h2>
+          <div id="options" class="options"></div>
+        </div>
+
+        <div class="quizFooter">
+          <button id="btnQuit">Quit & Cash Out</button>
+        </div>
+
+        <div id="msg" class="muted"></div>
+      </section>
+
+      <section id="leaderboardArea" class="card hidden">
+        <h3>Leaderboard</h3>
+        <ol id="leaderboardList"></ol>
+      </section>
+    </main>
+
+    <footer>
+      <h3>Thanks for visiting our page</h3>
+    </footer>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+:root {
+  --bg: #7386b0;
+  --card: #3e4042;
+  --accent: #ffcc00;
+  --muted: #c0c0c0;
+  --glass: rgba(255,255,255,0.03);
+}
+* { box-sizing: border-box; font-family: Inter, system-ui, Arial, sans-serif; }
+body {
+  margin:0; min-height:100vh; background: linear-gradient(180deg,#3b4d82 0%, #071021 100%); color:#fff;
+}
+.container { max-width:1100px; margin:24px auto; padding:20px; }
+header { text-align:center; margin-bottom:18px; }
+h1 { margin:0; font-size:28px; color:var(--accent); letter-spacing:0.5px; }
+.subtitle { margin:4px 0 14px; color:var(--muted); }
+.card { background:var(--card); padding:18px; border-radius:12px; box-shadow: 0 6px 18px rgba(0,0,0,0.5); margin-bottom:16px; }
+.small { padding:10px; width:260px; }
+.row { display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap; }
+.ladder { align-self:flex-start; }
+input#username { width:100%; padding:8px; margin-top:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:var(--glass); color:#fff; }
+button { margin-top:10px; padding:8px 12px; border-radius:8px; border:0; background:var(--accent); color:#000; cursor:pointer; font-weight:600; }
+button:active { transform:translateY(1px); }
+.controls { margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
+.muted { color:var(--muted); margin-top:8px; }
+.ladder h3 { margin-top:0; }
+#ladderList { list-style:none; padding:0; margin:8px 0 0; max-height:380px; overflow:auto; }
+#ladderList li { padding:6px 8px; border-radius:6px; display:flex; justify-content:space-between; gap:8px; }
+#ladderList li.level-15 { background:linear-gradient(90deg,#2b2b2b,#1a1a1a); color:var(--accent); font-weight:700; }
+.hidden { display:none; }
+.quizHeader { display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
+.questionBox { padding:12px; background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:8px; }
+.options { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+.optionBtn { padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:transparent; cursor:pointer; text-align:left; }
+.optionBtn:hover { background:rgba(255,255,255,0.02); }
+.optionBtn.correct { border-color:green; background:rgba(0,128,0,0.08); }
+.optionBtn.wrong { border-color:red; background:rgba(255,0,0,0.06); }
+.quizFooter { margin-top:12px; display:flex; justify-content:flex-end; }
+#msg { margin-top:10px; color:var(--muted); }
+footer { text-align:center; margin-top:12px; color:var(--muted); font-size:12px; }
